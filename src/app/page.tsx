@@ -632,7 +632,7 @@ export default function LoveWebsite() {
                  }}>
                 Sonsuz bir aşkla, senin için yapıldı ❤️
               </p>
-              <p className="text-gray-600 text-sm mt-1">08.11.2024 - ∞ • VERCEL AUTO-DEPLOY TEST � Build: {Date.now()}</p>
+              <p className="text-gray-600 text-sm mt-1">08.11.2024 - ∞ • ✅ AUTO-DEPLOY ÇALIŞIYOR! 🚀</p>
             </motion.div>
           </footer>
         </div>
