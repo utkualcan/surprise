@@ -11,5 +11,12 @@
       "src": "/(.*)",
       "dest": "/"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/www/(.*)",
+      "destination": "https://seniseviyorum.me/$1",
+      "permanent": true
+    }
   ]
 }

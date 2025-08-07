@@ -11,6 +11,15 @@ const nextConfig = {
     ],
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/www/:path*',
+        destination: 'https://seniseviyorum.me/:path*',
+        permanent: true,
+      },
+    ]
+  },
 };
 
 module.exports = nextConfig;
