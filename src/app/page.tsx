@@ -18,7 +18,7 @@ export default function LoveWebsite() {
   const [heartRain, setHeartRain] = useState<Array<{id: number, x: number, delay: number}>>([]);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isLoading, setIsLoading] = useState(false); // Set to false to skip loading
-  const [countdownFinished, setCountdownFinished] = useState(true); // Changed to true to show content immediately
+  const [countdownFinished, setCountdownFinished] = useState(false); // Changed to false to show countdown
   const [showScrollArrow, setShowScrollArrow] = useState(true);
   
   // Refs for performance
@@ -31,9 +31,8 @@ export default function LoveWebsite() {
   const parallaxY = useTransform(mouseY, [-300, 300], [-30, 30]);
 
   useEffect(() => {
-    // Countdown timer - Set to current time + 10 seconds for demo
-    const now = new Date();
-    const countDownDate = new Date(now.getTime() + 10000).getTime(); // 10 seconds from now
+    // Countdown timer - Set to August 8, 2025
+    const countDownDate = new Date('2025-08-08T00:00:00').getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -48,7 +47,7 @@ export default function LoveWebsite() {
 
       if (distance < 0) {
         clearInterval(timer);
-        setCountdown({ days: 0, hours, minutes: 0, seconds: 0 });
+        setCountdown({ days: 0, hours: 0, minutes: 0, seconds: 0 });
         setCountdownFinished(true);
       }
     }, 1000);
@@ -632,7 +631,7 @@ export default function LoveWebsite() {
                  }}>
                 Sonsuz bir aşkla, senin için yapıldı ❤️
               </p>
-              <p className="text-gray-600 text-sm mt-1">08.11.2024 - ∞ • ✅ AUTO-DEPLOY ÇALIŞIYOR! 🚀</p>
+              <p className="text-gray-600 text-sm mt-1">08.11.2024 - ∞</p>
             </motion.div>
           </footer>
         </div>
